@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+}
+
+/* login container style */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* login cards style */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* hospital logo */
+.hospital-logo {
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+
+/* login card design */
+.login-card h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+/* login userid password style */
+.login-subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* form style */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* login options style */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+    
+}
+
+.login-options a {
+    text-decoration: none;
+    margin-top:10x;
+    
+}
+
+/* login button style */
+.login-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #1769aa;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #12558b;
+}
+
+.back-home {
+    margin-top: 25px;
+}
+
+.back-home a {
+    color: #1769aa;
+}
