@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,302 @@
 
 
 </head>
+
 <body>
-    <!-- Header  -->
-     <div class="header"></div>
 
-    <!-- navigation -->
-     <div class="navigation"></div>
+    <div class="Dashboard-container">
 
-    <!-- main  -->
-    <div class="main"></div>
+        <!-- sidebar  -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span>🏥</span>
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link active">
+                    📊 Dashboard
+                </a>
+                <a href="patients.html" class="nav-link">
+                    👥 Patients
+                </a>
+                <a href="doctors.html" class="nav-link ">
+                    👨‍⚕️ Doctors
+                </a>
+                <a href="appointmnet.html" class="nav-link ">
+                    📅 Appointments
+                </a>
+                <a href="medicines.html" class="nav-link ">
+                    💊 Medicines
+                </a>
+                <a href="billing.html" class="nav-link">
+                    💳 Billing
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link">
+                    ⚙️ Settings
+                </a>
+                <a href="login.html" class="nav-link logout">
+                    🚪 Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Hospital Managment System</p>
+                </div>
+
+                <div class="header-right">
+                    <button class="notification-btn">
+                        🔔
+                    </button>
+
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Adminstrator</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- welcome Section -->
+            <section class="welcome-section">
+                <div>\
+                    <h2>Welcome back , Admin! 👋🏻</h2>
+
+                    <p>
+                        Here's what's happening in your hospital today.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Statics Cards -->
+            <section class="stats-grid">
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+                        <p>Total Patients</p>
+                        <h2>120</h2>
+                        <span>+8 this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <div>
+                        <p>Total Doctors</p>
+                        <h2>25</h2>
+                        <span>3 new doctors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        📅
+                    </div>
+
+                    <div>
+                        <p>Today's Appointments</p>
+                        <h2>18</h2>
+                        <span>5 Pending</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <div>
+                        <p>Total Revenue</p>
+                        <h2>₹45,800</h2>
+                        <span>This month</span>
+                    </div>
+                </div>
+            </section>
+
+            <!--  Dashboard Content Grid -->
+            <section class="dashboard-grid">
+
+
+                <!-- Appointments -->
+                <div class="dashboard-card appointments-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Today's Appointments</h3>
+                            <p>Upcoming patient appointments</p>
+                        </div>
+
+                        <a href="appointments.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Rahul Sharma</td>
+                                    <td>Dr. Mehta</td>
+                                    <td>10:00 AM</td>
+                                    <td>
+                                        <span class="status confirmed">
+                                            Confirmed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Priya Patel</td>
+                                    <td>Dr. Shah</td>
+                                    <td>11:30 AM</td>
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Amit Kumar</td>
+                                    <td>Dr. Singh</td>
+                                    <td>01:00 PM</td>
+                                    <td>
+                                        <span class="status confirmed">
+                                            Confirmed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Neha Verma</td>
+                                    <td>Dr. Mehta</td>
+                                    <td>03:30 PM</td>
+                                    <td>
+                                        <span class="status cancelled">
+                                            Cancelled
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Actions -->
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Quick Actions</h3>
+                            <p>Common hospital tasks</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a href="patients.html" class="quick-action">
+                            <span>➕</span>
+                            <div>
+                                <strong>Add Patient</strong>
+                                <small>Register a new patient</small>
+                            </div>
+                        </a>
+
+
+                        <a href="doctors.html" class="quick-action">
+                            <span>👨‍⚕️</span>
+                            <div>
+                                <strong>Manage Doctors</strong>
+                                <small>View doctor information</small>
+                            </div>
+                        </a>
+
+
+                        <a href="appointments.html" class="quick-action">
+                            <span>📅</span>
+                            <div>
+                                <strong>Book Appointment</strong>
+                                <small>Create new appointment</small>
+                            </div>
+                        </a>
+
+
+                        <a href="billing.html" class="quick-action">
+                            <span>💳</span>
+                            <div>
+                                <strong>Create Bill</strong>
+                                <small>Generate patient bill</small>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Hospital Management System
+                </p>
+
+            </footer>
+
+        </main>
+
+
+    </div>
 </body>
+
 </html>
