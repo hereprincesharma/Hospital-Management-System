@@ -6,9 +6,279 @@
     <title>PATIENTS</title>
 
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
 <body>
-    
+    <div class="dashboard-container">
+
+        <!--Sidebar-->
+         <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <span>🏥</span>
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    📊 Dashboard
+                </a>
+
+                <a href="patients.html" class="nav-link active">
+                    👥 Patients
+                </a>
+
+                <a href="doctors.html" class="nav-link">
+                    👨‍⚕️ Doctors
+                </a>
+
+                <a href="appointments.html" class="nav-link">
+                    📅 Appointments
+                </a>
+
+                <a href="medicines.html" class="nav-link">
+                    💊 Medicines
+                </a>
+
+                <a href="billing.html" class="nav-link">
+                    💳 Billing
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    ⚙️ Settings
+                </a>
+
+                <a href="login.html" class="nav-link logout">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="top-header">
+
+                <div>
+                    <h1>Patients</h1>
+                    <p>Manage hospital patients</p>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="notification-btn">
+                        🔔
+                    </button>
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+            
+            <!--Pateints Actions-->
+            <section class="patients-actions">
+                
+                <div>
+                    <h2>Patients Record</h2>
+                    <p>View and manage registered patients</p>
+                </div>
+
+                <button class="add-pateint-btn">
+                    + Add Patient
+                </button>
+            </section>
+
+            <!--Search-->
+            <section class="patient-search">
+
+                <input type="text" placeholder="Search Patient by Name,ID or Phone">
+
+                <button>Search</button>
+            </section>
+
+            <!--Patients Table-->
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>All Patients</h3>
+                         <p>Currently registered patients</p>
+                    </div>
+
+                    <span>Total : 120</span>
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Phone</th>
+                                <th>Blood Group</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                 <td>P001</td>
+
+                                <td>
+                                    Rahul Sharma
+                                </td>
+
+                                <td>28</td>
+
+                                <td>Male</td>
+
+                                <td>9876543210</td>
+
+                                <td>O+</td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>P002</td>
+
+                                <td>
+                                    Priya Patel
+                                </td>
+
+                                <td>35</td>
+
+                                <td>Female</td>
+
+                                <td>9876501234</td>
+
+                                <td>A+</td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>P003</td>
+
+                                <td>
+                                    Amit Kumar
+                                </td>
+
+                                <td>42</td>
+
+                                <td>Male</td>
+
+                                <td>9812345678</td>
+
+                                <td>B+</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Under Treatment
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>P004</td>
+
+                                <td>
+                                    Neha Verma
+                                </td>
+
+                                <td>31</td>
+
+                                <td>Female</td>
+
+                                <td>9898989898</td>
+
+                                <td>AB+</td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>        
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+
+            <!--Footer-->
+            <footer class="dashboard-footer">
+
+                <p>
+                     © 2026 Hospital Management System
+                </p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
