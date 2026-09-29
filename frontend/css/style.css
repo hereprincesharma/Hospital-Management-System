@@ -687,3 +687,152 @@ tbody tr:hover {
         padding: 12px;
     }
 }
+
+/* ================================
+   DOCTORS PAGE
+================================ */
+
+.doctor-actions {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.doctor-actions h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.doctor-actions p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.add-doctor-btn {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-doctor-btn:hover {
+    background: #12558b;
+}
+
+
+/* ================================
+   DOCTOR SEARCH
+================================ */
+
+.doctor-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.doctor-search input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.doctor-search input:focus {
+    border-color: #1769aa;
+}
+
+.doctor-search button {
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1769aa;
+    color: white;
+    cursor: pointer;
+}
+
+.doctor-search button:hover {
+    background: #12558b;
+}
+
+
+/* ================================
+   DOCTOR TABLE
+================================ */
+
+.doctor-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.doctor-table th {
+    text-align: left;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    padding: 13px;
+}
+
+.doctor-table td {
+    padding: 14px 13px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+}
+
+.doctor-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* ================================
+   DOCTOR ACTION BUTTON
+================================ */
+
+.doctor-view-btn {
+    border: none;
+    background: #e8f3fb;
+    color: #1769aa;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.doctor-view-btn:hover {
+    background: #1769aa;
+    color: white;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    .doctor-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .doctor-search {
+        flex-direction: column;
+    }
+
+    .doctor-search button {
+        padding: 12px;
+    }
+}
