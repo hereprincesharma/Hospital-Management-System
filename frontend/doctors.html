@@ -4,8 +4,418 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Doctors </title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+
+    <div class="dashboard-container">
+
+        <!-- ================================
+             SIDEBAR
+        ================================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <span>🏥</span>
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    📊 Dashboard
+                </a>
+
+                <a href="patients.html" class="nav-link">
+                    👥 Patients
+                </a>
+
+                <a href="doctors.html" class="nav-link active">
+                    👨‍⚕️ Doctors
+                </a>
+
+                <a href="appointments.html" class="nav-link">
+                    📅 Appointments
+                </a>
+
+                <a href="medicines.html" class="nav-link">
+                    💊 Medicines
+                </a>
+
+                <a href="billing.html" class="nav-link">
+                    💳 Billing
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    ⚙️ Settings
+                </a>
+
+                <a href="login.html" class="nav-link logout">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <main class="main-content">
+
+            <!-- Top Header -->
+
+            <header class="top-header">
+
+                <div>
+                    <h1>Doctors</h1>
+                    <p>Manage hospital doctors</p>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="notification-btn">
+                        🔔
+                    </button>
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================================
+                 DOCTOR ACTIONS
+            ================================= -->
+
+            <section class="patient-actions">
+
+                <div>
+                    <h2>Doctor Records</h2>
+
+                    <p>
+                        View and manage registered doctors
+                    </p>
+                </div>
+
+                <button class="add-patient-btn">
+                    + Add Doctor
+                </button>
+
+            </section>
+
+
+            <!-- ================================
+                 SEARCH
+            ================================= -->
+
+            <section class="patient-search">
+
+                <input
+                    type="text"
+                    placeholder="Search doctor by name, ID or specialization..."
+                >
+
+                <button>
+                    Search
+                </button>
+
+            </section>
+
+
+            <!-- ================================
+                 DOCTORS TABLE
+            ================================= -->
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>All Doctors</h3>
+
+                        <p>
+                            Currently registered doctors
+                        </p>
+                    </div>
+
+                    <span>
+                        Total: 25
+                    </span>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Doctor ID</th>
+                                <th>Name</th>
+                                <th>Specialization</th>
+                                <th>Experience</th>
+                                <th>Phone</th>
+                                <th>Availability</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- Doctor 1 -->
+
+                            <tr>
+
+                                <td>D001</td>
+
+                                <td>
+                                    Dr. Mehta
+                                </td>
+
+                                <td>
+                                    Cardiologist
+                                </td>
+
+                                <td>
+                                    12 Years
+                                </td>
+
+                                <td>
+                                    9876543210
+                                </td>
+
+                                <td>
+                                    Mon - Fri
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Available
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Doctor 2 -->
+
+                            <tr>
+
+                                <td>D002</td>
+
+                                <td>
+                                    Dr. Shah
+                                </td>
+
+                                <td>
+                                    Neurologist
+                                </td>
+
+                                <td>
+                                    8 Years
+                                </td>
+
+                                <td>
+                                    9876501234
+                                </td>
+
+                                <td>
+                                    Tue - Sat
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Available
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Doctor 3 -->
+
+                            <tr>
+
+                                <td>D003</td>
+
+                                <td>
+                                    Dr. Singh
+                                </td>
+
+                                <td>
+                                    Orthopedic
+                                </td>
+
+                                <td>
+                                    10 Years
+                                </td>
+
+                                <td>
+                                    9812345678
+                                </td>
+
+                                <td>
+                                    Mon - Thu
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        On Leave
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Doctor 4 -->
+
+                            <tr>
+
+                                <td>D004</td>
+
+                                <td>
+                                    Dr. Priya
+                                </td>
+
+                                <td>
+                                    Pediatrician
+                                </td>
+
+                                <td>
+                                    6 Years
+                                </td>
+
+                                <td>
+                                    9898989898
+                                </td>
+
+                                <td>
+                                    Mon - Sat
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Available
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Doctor 5 -->
+
+                            <tr>
+
+                                <td>D005</td>
+
+                                <td>
+                                    Dr. Joshi
+                                </td>
+
+                                <td>
+                                    General Physician
+                                </td>
+
+                                <td>
+                                    15 Years
+                                </td>
+
+                                <td>
+                                    9765432109
+                                </td>
+
+                                <td>
+                                    Mon - Fri
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Available
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================
+                 FOOTER
+            ================================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Hospital Management System
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
 </body>
 </html>
