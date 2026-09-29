@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicines | Hospital Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- ================================
+             SIDEBAR
+        ================================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <span>🏥</span>
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    📊 Dashboard
+                </a>
+
+                <a href="patients.html" class="nav-link">
+                    👥 Patients
+                </a>
+
+                <a href="doctors.html" class="nav-link">
+                    👨‍⚕️ Doctors
+                </a>
+
+                <a href="appointmnet.html" class="nav-link">
+                    📅 Appointments
+                </a>
+
+                <a href="medicines.html" class="nav-link active">
+                    💊 Medicines
+                </a>
+
+                <a href="billing.html" class="nav-link">
+                    💳 Billing
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    ⚙️ Settings
+                </a>
+
+                <a href="login.html" class="nav-link logout">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <main class="main-content">
+
+            <!-- Top Header -->
+
+            <header class="top-header">
+
+                <div>
+                    <h1>Medicines</h1>
+                    <p>Manage hospital medicines and stock</p>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="notification-btn">
+                        🔔
+                    </button>
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================================
+                 MEDICINE ACTIONS
+            ================================= -->
+
+            <section class="patient-actions">
+
+                <div>
+                    <h2>Medicine Records</h2>
+
+                    <p>
+                        View and manage available medicines
+                    </p>
+                </div>
+
+                <button class="add-patient-btn">
+                    + Add Medicine
+                </button>
+
+            </section>
+
+
+            <!-- ================================
+                 SEARCH
+            ================================= -->
+
+            <section class="patient-search">
+
+                <input
+                    type="text"
+                    placeholder="Search medicine by name, ID or category..."
+                >
+
+                <button>
+                    Search
+                </button>
+
+            </section>
+
+
+            <!-- ================================
+                 MEDICINE TABLE
+            ================================= -->
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>All Medicines</h3>
+
+                        <p>
+                            Currently available medicines
+                        </p>
+                    </div>
+
+                    <span>
+                        Total: 50
+                    </span>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Medicine ID</th>
+                                <th>Medicine Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Expiry Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- Medicine 1 -->
+
+                            <tr>
+
+                                <td>M001</td>
+
+                                <td>
+                                    Paracetamol
+                                </td>
+
+                                <td>
+                                    Pain Relief
+                                </td>
+
+                                <td>
+                                    500
+                                </td>
+
+                                <td>
+                                    ₹25
+                                </td>
+
+                                <td>
+                                    Dec 2027
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        In Stock
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Medicine 2 -->
+
+                            <tr>
+
+                                <td>M002</td>
+
+                                <td>
+                                    Amoxicillin
+                                </td>
+
+                                <td>
+                                    Antibiotic
+                                </td>
+
+                                <td>
+                                    120
+                                </td>
+
+                                <td>
+                                    ₹80
+                                </td>
+
+                                <td>
+                                    Aug 2027
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        In Stock
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Medicine 3 -->
+
+                            <tr>
+
+                                <td>M003</td>
+
+                                <td>
+                                    Cetirizine
+                                </td>
+
+                                <td>
+                                    Allergy
+                                </td>
+
+                                <td>
+                                    35
+                                </td>
+
+                                <td>
+                                    ₹40
+                                </td>
+
+                                <td>
+                                    May 2027
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Low Stock
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Medicine 4 -->
+
+                            <tr>
+
+                                <td>M004</td>
+
+                                <td>
+                                    Azithromycin
+                                </td>
+
+                                <td>
+                                    Antibiotic
+                                </td>
+
+                                <td>
+                                    15
+                                </td>
+
+                                <td>
+                                    ₹120
+                                </td>
+
+                                <td>
+                                    Mar 2027
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Low Stock
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Medicine 5 -->
+
+                            <tr>
+
+                                <td>M005</td>
+
+                                <td>
+                                    Omeprazole
+                                </td>
+
+                                <td>
+                                    Gastric
+                                </td>
+
+                                <td>
+                                    200
+                                </td>
+
+                                <td>
+                                    ₹60
+                                </td>
+
+                                <td>
+                                    Nov 2027
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        In Stock
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================
+                 FOOTER
+            ================================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Hospital Management System
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
