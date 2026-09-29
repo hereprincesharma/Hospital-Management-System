@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billing | Hospital Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- ================================
+             SIDEBAR
+        ================================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <span>🏥</span>
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    📊 Dashboard
+                </a>
+
+                <a href="patients.html" class="nav-link">
+                    👥 Patients
+                </a>
+
+                <a href="doctors.html" class="nav-link">
+                    👨‍⚕️ Doctors
+                </a>
+
+                <a href="appointments.html" class="nav-link">
+                    📅 Appointments
+                </a>
+
+                <a href="medicines.html" class="nav-link">
+                    💊 Medicines
+                </a>
+
+                <a href="billing.html" class="nav-link active">
+                    💳 Billing
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    ⚙️ Settings
+                </a>
+
+                <a href="login.html" class="nav-link logout">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <main class="main-content">
+
+            <!-- Top Header -->
+
+            <header class="top-header">
+
+                <div>
+                    <h1>Billing</h1>
+                    <p>Manage hospital billing and payments</p>
+                </div>
+
+                <div class="header-right">
+
+                    <button class="notification-btn">
+                        🔔
+                    </button>
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================================
+                 BILLING ACTIONS
+            ================================= -->
+
+            <section class="patient-actions">
+
+                <div>
+                    <h2>Billing Records</h2>
+
+                    <p>
+                        View and manage patient bills
+                    </p>
+                </div>
+
+                <button class="add-patient-btn">
+                    + Create Bill
+                </button>
+
+            </section>
+
+
+            <!-- ================================
+                 SEARCH
+            ================================= -->
+
+            <section class="patient-search">
+
+                <input
+                    type="text"
+                    placeholder="Search by bill ID or patient name..."
+                >
+
+                <button>
+                    Search
+                </button>
+
+            </section>
+
+
+            <!-- ================================
+                 BILLING TABLE
+            ================================= -->
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>All Bills</h3>
+
+                        <p>
+                            Recent patient billing records
+                        </p>
+                    </div>
+
+                    <span>
+                        Total: 45
+                    </span>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Bill ID</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Service</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Payment Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- Bill 1 -->
+
+                            <tr>
+
+                                <td>B001</td>
+
+                                <td>
+                                    Rahul Sharma
+                                </td>
+
+                                <td>
+                                    Dr. Mehta
+                                </td>
+
+                                <td>
+                                    Consultation
+                                </td>
+
+                                <td>
+                                    ₹1,500
+                                </td>
+
+                                <td>
+                                    29 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Bill 2 -->
+
+                            <tr>
+
+                                <td>B002</td>
+
+                                <td>
+                                    Priya Patel
+                                </td>
+
+                                <td>
+                                    Dr. Shah
+                                </td>
+
+                                <td>
+                                    Consultation
+                                </td>
+
+                                <td>
+                                    ₹2,000
+                                </td>
+
+                                <td>
+                                    29 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Bill 3 -->
+
+                            <tr>
+
+                                <td>B003</td>
+
+                                <td>
+                                    Amit Kumar
+                                </td>
+
+                                <td>
+                                    Dr. Singh
+                                </td>
+
+                                <td>
+                                    X-Ray
+                                </td>
+
+                                <td>
+                                    ₹3,500
+                                </td>
+
+                                <td>
+                                    28 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Bill 4 -->
+
+                            <tr>
+
+                                <td>B004</td>
+
+                                <td>
+                                    Neha Verma
+                                </td>
+
+                                <td>
+                                    Dr. Mehta
+                                </td>
+
+                                <td>
+                                    Blood Test
+                                </td>
+
+                                <td>
+                                    ₹800
+                                </td>
+
+                                <td>
+                                    28 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status cancelled">
+                                        Cancelled
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Bill 5 -->
+
+                            <tr>
+
+                                <td>B005</td>
+
+                                <td>
+                                    Rohan Gupta
+                                </td>
+
+                                <td>
+                                    Dr. Priya
+                                </td>
+
+                                <td>
+                                    Consultation
+                                </td>
+
+                                <td>
+                                    ₹1,200
+                                </td>
+
+                                <td>
+                                    27 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status confirmed">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================
+                 FOOTER
+            ================================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Hospital Management System
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
