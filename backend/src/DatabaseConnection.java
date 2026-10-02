@@ -4,26 +4,20 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    public static void main(String[] args) {
+    private static final String URL =
+            "jdbc:mysql://localhost:3306/hospital_db";
 
-        String url = "jdbc:mysql://localhost:3306/hospital_db";
-        String username = "root";
-        String password = "@Prince144";
+    private static final String USERNAME = "root";
 
-        try {
-            Connection connection = DriverManager.getConnection(
-                    url,
-                    username,
-                    password
-            );
+    private static final String PASSWORD =
+            "@Prince144";
 
-            System.out.println("Database connected successfully!");
+    public static Connection getConnection() throws SQLException {
 
-            connection.close();
-
-        } catch (SQLException e) {
-            System.out.println("Database connection failed!");
-            e.printStackTrace();
-        }
+        return DriverManager.getConnection(
+                URL,
+                USERNAME,
+                PASSWORD
+        );
     }
 }
