@@ -6,4 +6,4 @@ A web based Hospital Management System [college Project]
 
 👉 [View Live Website](https://hereprincesharma.github.io/Hospital-Management-System/)
 
-git commit check 
+databse added
