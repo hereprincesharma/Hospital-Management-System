@@ -44,6 +44,9 @@ public class BillTest {
 
         billDAO.updateBill(bill);
 
+        //delete 
+        billDAO.deleteBill(1);
+
         System.out.println("\nAll Bills:");
         billDAO.getAllBills();
 
