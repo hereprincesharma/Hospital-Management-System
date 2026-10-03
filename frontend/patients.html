@@ -6,6 +6,7 @@
     <title>PATIENTS</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/patients.js" defer></script>
 
 </head>
 <body>
@@ -126,7 +127,8 @@
                          <p>Currently registered patients</p>
                     </div>
 
-                    <span>Total : 120</span>
+                    <!-- <span>Total : 120</span> -->
+                    <span id="patientTotal">Total : 0</span>
                 </div>
 
                 <div class="table-container">
@@ -145,7 +147,7 @@
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <!-- <tbody>
                             <tr>
                                  <td>P001</td>
 
@@ -264,6 +266,8 @@
                                     </button>
                                 </td>
                             </tr>        
+                        </tbody> -->
+                        <tbody id="patientTableBody">
                         </tbody>
                     </table>
                 </div>
