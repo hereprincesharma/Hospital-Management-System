@@ -29,6 +29,9 @@ public class AppointmentTest {
 
         appointmentDAO.updateAppointment(appointment);
 
+        //delete id 1
+        appointmentDAO.deleteAppointment(1);
+
 
         System.out.println("\nAll Appointments:");
         appointmentDAO.getAllAppointments();
