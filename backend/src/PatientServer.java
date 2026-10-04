@@ -27,36 +27,59 @@ public class PatientServer {
 
         server.start();
     }
+// Handles GET, POST and OPTIONS requests
+public static void handlePatients(HttpExchange exchange)
+        throws IOException {
 
-    // Handles GET and POST requests
-    public static void handlePatients(HttpExchange exchange)
-            throws IOException {
+    String method = exchange.getRequestMethod();
 
-        String method = exchange.getRequestMethod();
+    // CORS preflight request
+    if (method.equalsIgnoreCase("OPTIONS")) {
 
-        if (method.equalsIgnoreCase("GET")) {
+        exchange.getResponseHeaders()
+                .set("Access-Control-Allow-Origin", "*");
 
-            getPatients(exchange);
+        exchange.getResponseHeaders()
+                .set("Access-Control-Allow-Methods",
+                        "GET, POST, OPTIONS");
 
-        } else if (method.equalsIgnoreCase("POST")) {
+        exchange.getResponseHeaders()
+                .set("Access-Control-Allow-Headers",
+                        "Content-Type");
 
-            addPatient(exchange);
+        exchange.sendResponseHeaders(204, -1);
 
-        } else {
+        exchange.close();
 
-            String response = "{\"error\":\"Method not allowed\"}";
-
-            exchange.sendResponseHeaders(
-                    405,
-                    response.getBytes().length
-            );
-
-            OutputStream output = exchange.getResponseBody();
-            output.write(response.getBytes());
-            output.close();
-        }
+        return;
     }
 
+    if (method.equalsIgnoreCase("GET")) {
+
+        getPatients(exchange);
+
+    } else if (method.equalsIgnoreCase("POST")) {
+
+        addPatient(exchange);
+
+    } else {
+
+        String response =
+                "{\"error\":\"Method not allowed\"}";
+
+        exchange.sendResponseHeaders(
+                405,
+                response.getBytes().length
+        );
+
+        OutputStream output =
+                exchange.getResponseBody();
+
+        output.write(response.getBytes());
+
+        output.close();
+    }
+}
     // GET - Fetch all patients
     public static void getPatients(HttpExchange exchange)
             throws IOException {
