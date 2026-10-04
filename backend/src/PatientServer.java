@@ -105,7 +105,10 @@ public class PatientServer {
             addPatient(exchange);
         }
 
+        else if (method.equalsIgnoreCase("PUT")) {
 
+            updatePatient(exchange);
+        }
         // Other methods
         else {
 
@@ -743,6 +746,174 @@ public class PatientServer {
             output.close();
         }
     }
+
+    // ==========================================
+// PUT - UPDATE PATIENT
+// ==========================================
+
+public static void updatePatient(
+        HttpExchange exchange) throws IOException {
+
+    try {
+
+        // Get patient ID from URL
+        String path =
+                exchange.getRequestURI().getPath();
+
+        String idString =
+                path.substring("/patients/".length());
+
+        int patientId =
+                Integer.parseInt(idString);
+
+        // Read request body
+        InputStream input =
+                exchange.getRequestBody();
+
+        String body =
+                new String(input.readAllBytes());
+
+        System.out.println("Update data:");
+        System.out.println(body);
+
+        // Get values from JSON
+        String name =
+                getValue(body, "name");
+
+        int age =
+                Integer.parseInt(
+                        getValue(body, "age")
+                );
+
+        String gender =
+                getValue(body, "gender");
+
+        String phone =
+                getValue(body, "phone");
+
+        String email =
+                getValue(body, "email");
+
+        String address =
+                getValue(body, "address");
+
+        String bloodGroup =
+                getValue(body, "blood_group");
+
+        // Connect to database
+        Connection connection =
+                DatabaseConnection.getConnection();
+
+        String sql =
+                "UPDATE patients SET " +
+                "name = ?, age = ?, gender = ?, " +
+                "phone = ?, email = ?, address = ?, " +
+                "blood_group = ? " +
+                "WHERE patient_id = ?";
+
+        PreparedStatement statement =
+                connection.prepareStatement(sql);
+
+        statement.setString(1, name);
+        statement.setInt(2, age);
+        statement.setString(3, gender);
+        statement.setString(4, phone);
+        statement.setString(5, email);
+        statement.setString(6, address);
+        statement.setString(7, bloodGroup);
+        statement.setInt(8, patientId);
+
+        int rowsUpdated =
+                statement.executeUpdate();
+
+        statement.close();
+        connection.close();
+
+        if (rowsUpdated > 0) {
+
+            String response =
+                    "{\"message\":\"Patient updated successfully\"}";
+
+            exchange.getResponseHeaders()
+                    .set(
+                            "Content-Type",
+                            "application/json"
+                    );
+
+            exchange.getResponseHeaders()
+                    .set(
+                            "Access-Control-Allow-Origin",
+                            "*"
+                    );
+
+            exchange.sendResponseHeaders(
+                    200,
+                    response.getBytes().length
+            );
+
+            OutputStream output =
+                    exchange.getResponseBody();
+
+            output.write(
+                    response.getBytes()
+            );
+
+            output.close();
+
+        } else {
+
+            String response =
+                    "{\"error\":\"Patient not found\"}";
+
+            exchange.getResponseHeaders()
+                    .set(
+                            "Access-Control-Allow-Origin",
+                            "*"
+                    );
+
+            exchange.sendResponseHeaders(
+                    404,
+                    response.getBytes().length
+            );
+
+            OutputStream output =
+                    exchange.getResponseBody();
+
+            output.write(
+                    response.getBytes()
+            );
+
+            output.close();
+        }
+
+    } catch (Exception e) {
+
+        e.printStackTrace();
+
+        String response =
+                "{\"error\":\"Failed to update patient\"}";
+
+        exchange.getResponseHeaders()
+                .set(
+                        "Access-Control-Allow-Origin",
+                        "*"
+                );
+
+        exchange.sendResponseHeaders(
+                500,
+                response.getBytes().length
+        );
+
+        OutputStream output =
+                exchange.getResponseBody();
+
+        output.write(
+                response.getBytes()
+        );
+
+        output.close();
+    }
+}
 
 
     // ==========================================
